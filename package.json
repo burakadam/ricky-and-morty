@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.7.4",
+    "@craco/craco": "^7.0.0",
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
@@ -24,12 +25,16 @@
   },
   "scripts": {
     "dev": "concurrently \"yarn start\" \"yarn generate --watch\"",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
     "generate": "graphql-codegen",
-    "prestart": "yarn generate"
+    "prestart": "yarn generate",
+    "lint:tsc": "tsc",
+    "lint:eslint": "eslint 'src/**/*.ts'",
+    "lint": "yarn lint:tsc && yarn lint:eslint",
+    "format": "prettier --write 'src/**/*.ts' && yarn lint:eslint --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -55,7 +60,6 @@
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "eslint": "^8.28.0",
-    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",

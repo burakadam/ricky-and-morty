@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "extends": ["plugin:prettier/recommended", "airbnb-base"],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -51,6 +51,24 @@
             "newlines-between": "always"
           }
         ],
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never"
+          }
+        ],
+        "import/parsers": {
+          "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        },
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
           "error",
