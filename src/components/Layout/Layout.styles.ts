@@ -1,5 +1,9 @@
-import styled from '@emotion/styled';
 import { AppBar } from '@mui/material';
+import { styled } from '@mui/system';
+
+const Container = styled('div')(({ theme }) => ({
+  background: theme.palette.secondary.main
+}));
 
 const Header = styled(AppBar)`
   height: 50px;
@@ -8,18 +12,18 @@ const Header = styled(AppBar)`
   padding: 0 10px;
 `;
 
-const Logo = styled.img`
+const Logo = styled('img')`
   height: 40px;
   width: auto;
   align-self: flex-start;
   margin-top: 5px;
 `;
 
-const TextLogo = styled.img`
+const TextLogo = styled('img')`
   height: 30px;
   width: auto;
   align-items: flex-end;
   margin-top: 10px;
 `;
 
-export { Header, Logo, TextLogo };
+export { Container, Header, Logo, TextLogo };

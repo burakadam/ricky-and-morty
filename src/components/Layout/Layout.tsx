@@ -1,13 +1,14 @@
 import type { ILayoutProps } from '.';
 import { Footer } from './Layout.footer';
 import { Header } from './Layout.header';
+import * as S from './Layout.styles';
 
 const Layout = (props: ILayoutProps) => (
-  <div>
+  <S.Container>
     <Header />
     {props.children}
     <Footer />
-  </div>
+  </S.Container>
 );
 
 export { Layout };
