@@ -1,4 +1,5 @@
 import { useQuery } from '@apollo/client';
+import { Typography } from '@mui/material';
 
 import { graphql } from '@/gql/gql';
 
@@ -19,7 +20,11 @@ function App() {
   const { data } = useQuery(GET_CHARACTERS);
 
   console.log(data);
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Typography>Hello Rick And Morty</Typography>
+    </div>
+  );
 }
 
 export default App;

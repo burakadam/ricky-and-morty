@@ -2,10 +2,10 @@ import { ApolloProvider } from '@apollo/client';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import CLIENT from '@/apollo/client';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-import CLIENT from '@/apollo/client';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
