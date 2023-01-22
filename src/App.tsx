@@ -1,6 +1,6 @@
-import { useQuery } from "@apollo/client";
+import { useQuery } from '@apollo/client';
 
-import { graphql } from "./gql/gql";
+import { graphql } from './gql/gql';
 
 const GET_CHARACTERS = graphql(/* GraphQL */ `
   query getChractes {
