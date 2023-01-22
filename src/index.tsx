@@ -1,4 +1,5 @@
 import { ApolloProvider } from '@apollo/client';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -6,15 +7,19 @@ import CLIENT from '@/apollo/client';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import THEME from './theme';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <ApolloProvider client={CLIENT}>
-      <App />
-    </ApolloProvider>
+    <ThemeProvider theme={THEME}>
+      <ApolloProvider client={CLIENT}>
+        <CssBaseline />
+        <App />
+      </ApolloProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

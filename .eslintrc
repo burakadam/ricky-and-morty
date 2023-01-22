@@ -54,7 +54,8 @@
             "tsx": "never"
           }
         ],
-        "react/jsx-filename-extension": [0]
+        "react/jsx-filename-extension": [0],
+        "import/export": 0
       }
     },
     {
