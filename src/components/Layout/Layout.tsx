@@ -6,7 +6,7 @@ import * as S from './Layout.styles';
 const Layout = (props: ILayoutProps) => (
   <S.Container>
     <Header />
-    {props.children}
+    <S.Content>{props.children}</S.Content>
     <Footer />
   </S.Container>
 );

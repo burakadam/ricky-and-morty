@@ -1,9 +1,17 @@
 import { AppBar } from '@mui/material';
 import { styled } from '@mui/system';
 
-const Container = styled('div')(({ theme }) => ({
-  background: theme.palette.secondary.main
-}));
+const Container = styled('div')`
+  min-height: 100vh;
+  padding: 50px 20px 0 20px;
+`;
+
+const Content = styled('div')`
+  width: 100%;
+  max-width: 980px;
+  margin: auto;
+  padding: 30px 0;
+`;
 
 const Header = styled(AppBar)`
   height: 50px;
@@ -26,4 +34,27 @@ const TextLogo = styled('img')`
   margin-top: 10px;
 `;
 
-export { Container, Header, Logo, TextLogo };
+const Footer = styled('footer')`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px 20px 10px;
+`;
+
+const FooterImage = styled('img')`
+  width: 80%;
+  max-width: 150px;
+`;
+
+const CreatedBy = styled('div')`
+  display: flex;
+  margin: 20px 0;
+  opacity: 0.8;
+  > span {
+    margin: 0 0.2em;
+  }
+`;
+
+export { Container, Content, CreatedBy, Footer, FooterImage, Header, Logo, TextLogo };

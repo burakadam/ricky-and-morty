@@ -19,8 +19,8 @@ function HideOnScroll(props: IHideOnScrollProps) {
 const Header = () => (
   <HideOnScroll>
     <S.Header position="fixed" color="primary">
-      <S.Logo src={LOGO} />
-      <S.TextLogo src={TEXT_LOGO} />
+      <S.Logo src={LOGO} alt="Rick and Morty silhoutte" />
+      <S.TextLogo src={TEXT_LOGO} alt="Rick and Morty show text logo" />
     </S.Header>
   </HideOnScroll>
 );
