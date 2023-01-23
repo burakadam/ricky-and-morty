@@ -2,11 +2,11 @@ import { AppBar } from '@mui/material';
 import { styled } from '@mui/system';
 
 const Container = styled('div')`
-  min-height: 100vh;
   padding: 50px 20px 0 20px;
 `;
 
 const Content = styled('div')`
+  min-height: 100vh;
   width: 100%;
   max-width: 980px;
   margin: auto;

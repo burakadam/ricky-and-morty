@@ -1,12 +1,15 @@
-import type { ILayoutProps } from '.';
+import { Outlet } from 'react-router-dom';
+
 import { Footer } from './Layout.footer';
 import { Header } from './Layout.header';
 import * as S from './Layout.styles';
 
-const Layout = (props: ILayoutProps) => (
+const Layout = () => (
   <S.Container>
     <Header />
-    <S.Content>{props.children}</S.Content>
+    <S.Content>
+      <Outlet />
+    </S.Content>
     <Footer />
   </S.Container>
 );
