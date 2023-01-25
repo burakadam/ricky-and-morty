@@ -1,1 +1,2 @@
-export * from './Characters';
+export * from './Detail';
+export * from './List';

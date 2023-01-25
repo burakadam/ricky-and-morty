@@ -1,5 +1,4 @@
 import { useQuery } from '@apollo/client';
-import { Typography } from '@mui/material';
 
 import { graphql } from '@/gql/gql';
 
@@ -13,15 +12,11 @@ const GET_CHARACTERS = graphql(/* GraphQL */ `
   }
 `);
 
-function Characters() {
+const Main = () => {
   const { data } = useQuery(GET_CHARACTERS);
 
   console.log(data);
-  return (
-    <>
-      <Typography>Hello Rick And Morty characters</Typography>
-    </>
-  );
-}
+  return <div>List</div>;
+};
 
-export { Characters };
+export { Main };
