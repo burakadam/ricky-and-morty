@@ -4,7 +4,7 @@ export interface ICharactersState {
   species: string;
   type: string;
   gender: string;
-  currentPage: number;
+  page: number;
 }
 
 export * from './characters.selectors';

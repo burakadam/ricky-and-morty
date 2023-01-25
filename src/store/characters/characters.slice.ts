@@ -10,7 +10,7 @@ const initialState: ICharactersState = {
   species: '',
   type: '',
   gender: '',
-  currentPage: 1
+  page: 1
 };
 
 const charactersSlice = createSlice({

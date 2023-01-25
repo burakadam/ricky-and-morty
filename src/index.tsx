@@ -2,12 +2,14 @@ import { ApolloProvider } from '@apollo/client';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { RouterProvider } from 'react-router-dom';
 
 import CLIENT from '@/apollo/client';
 
 import reportWebVitals from './reportWebVitals';
 import { ROUTER } from './router/router';
+import { store } from './store/store';
 import THEME from './theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
@@ -16,7 +18,9 @@ root.render(
     <ThemeProvider theme={THEME}>
       <ApolloProvider client={CLIENT}>
         <CssBaseline />
-        <RouterProvider router={ROUTER} />
+        <Provider store={store}>
+          <RouterProvider router={ROUTER} />
+        </Provider>
       </ApolloProvider>
     </ThemeProvider>
   </React.StrictMode>

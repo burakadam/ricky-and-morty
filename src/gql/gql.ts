@@ -13,7 +13,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel-plugin for production.
  */
 const documents = {
-    "\n  query getChractes {\n    characters(page: 1, filter: { name: \"\", status: \"\", species: \"\", type: \"\", gender: \"\" }) {\n      results {\n        name\n      }\n    }\n  }\n": types.GetChractesDocument,
+    "\n  query getCharacters($page: Int, $name: String, $status: String, $gender: String) {\n    characters(page: $page, filter: { name: $name, status: $status, gender: $gender }) {\n      results {\n        name\n        id\n        image\n        status\n        gender\n        type\n        species\n      }\n    }\n  }\n": types.GetCharactersDocument,
 };
 
 /**
@@ -33,7 +33,7 @@ export function graphql(source: string): unknown;
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "\n  query getChractes {\n    characters(page: 1, filter: { name: \"\", status: \"\", species: \"\", type: \"\", gender: \"\" }) {\n      results {\n        name\n      }\n    }\n  }\n"): (typeof documents)["\n  query getChractes {\n    characters(page: 1, filter: { name: \"\", status: \"\", species: \"\", type: \"\", gender: \"\" }) {\n      results {\n        name\n      }\n    }\n  }\n"];
+export function graphql(source: "\n  query getCharacters($page: Int, $name: String, $status: String, $gender: String) {\n    characters(page: $page, filter: { name: $name, status: $status, gender: $gender }) {\n      results {\n        name\n        id\n        image\n        status\n        gender\n        type\n        species\n      }\n    }\n  }\n"): (typeof documents)["\n  query getCharacters($page: Int, $name: String, $status: String, $gender: String) {\n    characters(page: $page, filter: { name: $name, status: $status, gender: $gender }) {\n      results {\n        name\n        id\n        image\n        status\n        gender\n        type\n        species\n      }\n    }\n  }\n"];
 
 export function graphql(source: string) {
   return (documents as any)[source] ?? {};
