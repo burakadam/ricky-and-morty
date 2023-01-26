@@ -16,7 +16,11 @@ const initialState: ICharactersState = {
 const charactersSlice = createSlice({
   name: REDUCERS.CHARACTERS,
   initialState,
-  reducers: {}
+  reducers: {
+    setPage(state, action) {
+      state.page = action.payload;
+    }
+  }
 });
 
 export const charactersAction = charactersSlice.actions;

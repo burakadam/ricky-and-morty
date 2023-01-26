@@ -1,10 +1,10 @@
 import { gql, useQuery } from '@apollo/client';
-import { ImageList } from '@mui/material';
+import { Box, ImageList, Pagination } from '@mui/material';
 
 import { Card } from '@/components/Card';
 import type { Character } from '@/gql/graphql';
-import { charactesSelectors } from '@/store/characters';
-import { useAppSelector } from '@/store/hooks';
+import { charactersAction, charactesSelectors } from '@/store/characters';
+import { useAppDispatch, useAppSelector } from '@/store/hooks';
 
 const GET_CHARACTERS = gql(/* GraphQL */ `
   query getCharacters($page: Int, $name: String, $status: String, $gender: String) {
@@ -18,18 +18,23 @@ const GET_CHARACTERS = gql(/* GraphQL */ `
         type
         species
       }
+      info {
+        pages
+      }
     }
   }
 `);
 
 const Main = () => {
+  const dispatch = useAppDispatch();
   const { name, status, species, type, gender, page } = useAppSelector(charactesSelectors.selectCharactersFilters);
 
-  const { loading, data } = useQuery(GET_CHARACTERS, { variables: { name, status, species, type, gender, page } });
+  const { loading, data, error } = useQuery(GET_CHARACTERS, { variables: { name, status, species, type, gender, page } });
+
+  const handlePagination = (_: unknown, v: number) => dispatch(charactersAction.setPage(v));
 
   if (loading) return <p>...loading</p>;
-
-  console.log(data);
+  if (error) return <p>ops something went wrong</p>;
 
   return (
     <div>
@@ -38,6 +43,9 @@ const Main = () => {
           <Card key={item.id} character={item} />
         ))}
       </ImageList>
+      <Box my={10} display="flex" justifyContent="center">
+        <Pagination count={data?.characters?.info.pages} color="primary" page={page} onChange={handlePagination} />
+      </Box>
     </div>
   );
 };
