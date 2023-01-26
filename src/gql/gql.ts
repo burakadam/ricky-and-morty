@@ -13,6 +13,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel-plugin for production.
  */
 const documents = {
+    "\n  query getCharacter($id: ID!) {\n    character(id: $id) {\n      name\n      image\n      status\n      gender\n      type\n      species\n      episode {\n        id\n        name\n        air_date\n      }\n    }\n  }\n": types.GetCharacterDocument,
     "\n  query getCharacters($page: Int, $name: String, $status: String, $gender: String, $species: String) {\n    characters(page: $page, filter: { name: $name, status: $status, gender: $gender, species: $species }) {\n      results {\n        name\n        id\n        image\n        status\n        gender\n        type\n        species\n      }\n      info {\n        pages\n      }\n    }\n  }\n": types.GetCharactersDocument,
 };
 
@@ -30,6 +31,10 @@ const documents = {
  */
 export function graphql(source: string): unknown;
 
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "\n  query getCharacter($id: ID!) {\n    character(id: $id) {\n      name\n      image\n      status\n      gender\n      type\n      species\n      episode {\n        id\n        name\n        air_date\n      }\n    }\n  }\n"): (typeof documents)["\n  query getCharacter($id: ID!) {\n    character(id: $id) {\n      name\n      image\n      status\n      gender\n      type\n      species\n      episode {\n        id\n        name\n        air_date\n      }\n    }\n  }\n"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
