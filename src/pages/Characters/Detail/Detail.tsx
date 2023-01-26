@@ -33,8 +33,6 @@ const Detail = () => {
 
   const { loading, data, error } = useQuery(GET_CHARACTER_DETAIL, { variables: { id } });
 
-  console.log('error', error);
-
   if (loading) return <Loading />;
   if (error) return <Error message={error?.message} />;
 
