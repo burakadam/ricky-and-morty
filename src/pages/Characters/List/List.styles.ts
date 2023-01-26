@@ -10,4 +10,11 @@ const Title = styled(Typography)`
   }
 `;
 
-export { Title };
+const Container = styled('div')`
+  display: flex;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+`;
+
+export { Container, Title };

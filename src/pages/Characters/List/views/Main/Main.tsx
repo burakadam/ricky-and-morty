@@ -10,8 +10,8 @@ import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import * as S from './Main.styles';
 
 const GET_CHARACTERS = gql(/* GraphQL */ `
-  query getCharacters($page: Int, $name: String, $status: String, $gender: String) {
-    characters(page: $page, filter: { name: $name, status: $status, gender: $gender }) {
+  query getCharacters($page: Int, $name: String, $status: String, $gender: String, $species: String) {
+    characters(page: $page, filter: { name: $name, status: $status, gender: $gender, species: $species }) {
       results {
         name
         id

@@ -19,6 +19,13 @@ const charactersSlice = createSlice({
   reducers: {
     setPage(state, action) {
       state.page = action.payload;
+    },
+    setFilters(state, action) {
+      state.name = action.payload.name;
+      state.species = action.payload.species;
+      state.status = action.payload.status;
+      state.gender = action.payload.gender;
+      state.type = action.payload.type;
     }
   }
 });

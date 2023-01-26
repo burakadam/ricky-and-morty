@@ -8,7 +8,7 @@ const Container = styled('div')`
 const Content = styled('div')`
   min-height: 100vh;
   width: 100%;
-  max-width: 980px;
+  max-width: 1024px;
   margin: auto;
   padding: 30px 0;
 `;
