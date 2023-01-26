@@ -2,6 +2,7 @@ import { gql, useQuery } from '@apollo/client';
 import { Box, Pagination } from '@mui/material';
 
 import { Card } from '@/components/Card';
+import { Error } from '@/components/Error';
 import { Loading } from '@/components/Loading';
 import type { Character } from '@/gql/graphql';
 import { charactersAction, charactesSelectors } from '@/store/characters';
@@ -37,7 +38,7 @@ const Main = () => {
   const handlePagination = (_: unknown, v: number) => dispatch(charactersAction.setPage(v));
 
   if (loading) return <Loading />;
-  if (error) return <p>ops something went wrong</p>;
+  if (error) return <Error message={error?.message} />;
 
   return (
     <div>

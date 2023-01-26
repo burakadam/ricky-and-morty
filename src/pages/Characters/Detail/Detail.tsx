@@ -1,6 +1,7 @@
 import { gql, useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
 
+import { Error } from '@/components/Error';
 import { Loading } from '@/components/Loading';
 
 import { NameField } from './components/NameField';
@@ -32,8 +33,10 @@ const Detail = () => {
 
   const { loading, data, error } = useQuery(GET_CHARACTER_DETAIL, { variables: { id } });
 
+  console.log('error', error);
+
   if (loading) return <Loading />;
-  if (error) return <p>ops something went wrong</p>;
+  if (error) return <Error message={error?.message} />;
 
   // eslint-disable-next-line @typescript-eslint/naming-convention, unused-imports/no-unused-vars
   const { name, image, episode, __typename, ...rest } = data.character;
