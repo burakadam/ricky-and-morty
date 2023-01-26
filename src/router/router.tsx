@@ -1,5 +1,6 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 
+import { Error } from '@/components/Error';
 import { Layout } from '@/components/Layout';
 import ROUTES from '@/constants/routes';
 import { Detail, List } from '@/pages/Characters';
@@ -16,7 +17,8 @@ const ROUTER = createBrowserRouter([
         path: `${ROUTES.CHARACTERS}/:id`,
         element: <Detail />
       }
-    ]
+    ],
+    errorElement: <Error />
   },
   {
     path: '*',

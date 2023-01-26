@@ -34,7 +34,7 @@ const Detail = () => {
   const { loading, data, error } = useQuery(GET_CHARACTER_DETAIL, { variables: { id } });
 
   if (loading) return <Loading />;
-  if (error) return <Error message={error?.message} />;
+  if (error || !data.character) return <Error message={error?.message} />;
 
   // eslint-disable-next-line @typescript-eslint/naming-convention, unused-imports/no-unused-vars
   const { name, image, episode, __typename, ...rest } = data.character;

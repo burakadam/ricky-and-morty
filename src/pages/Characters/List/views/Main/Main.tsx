@@ -38,7 +38,7 @@ const Main = () => {
   const handlePagination = (_: unknown, v: number) => dispatch(charactersAction.setPage(v));
 
   if (loading) return <Loading />;
-  if (error) return <Error message={error?.message} />;
+  if (error || !data.characters) return <Error message={error?.message} />;
 
   return (
     <div>

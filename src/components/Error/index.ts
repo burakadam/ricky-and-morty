@@ -1,5 +1,5 @@
 export interface IErrorProps {
-  message: string | undefined;
+  message?: string | undefined;
 }
 
 export * from './Error';
