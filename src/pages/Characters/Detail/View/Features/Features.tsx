@@ -4,14 +4,11 @@ import { NameField } from '../../components/NameField';
 
 import * as S from './Features.styles';
 
-const Features = (props: IFeaturesProps) => {
-  return (
-    <S.Container>
-      {Object.entries(props.list).map(([key, value]) => (
-        <NameField variant="h4" title={key.toLocaleUpperCase()} label={String(value || '-')} key={key} />
-      ))}
-    </S.Container>
-  );
-};
-
+const Features = (props: IFeaturesProps) => (
+  <S.Container>
+    {Object.entries(props.list).map(([key, value]) => (
+      <NameField variant="h4" title={key.toLocaleUpperCase()} label={String(value || '-')} key={key} />
+    ))}
+  </S.Container>
+);
 export { Features };
