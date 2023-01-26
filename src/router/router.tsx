@@ -2,7 +2,7 @@ import { createBrowserRouter, Navigate } from 'react-router-dom';
 
 import { Layout } from '@/components/Layout';
 import ROUTES from '@/constants/routes';
-import { Characters, Detail } from '@/pages/Characters';
+import { Detail, List } from '@/pages/Characters';
 
 const ROUTER = createBrowserRouter([
   {
@@ -10,7 +10,7 @@ const ROUTER = createBrowserRouter([
     children: [
       {
         path: ROUTES.CHARACTERS,
-        element: <Characters />
+        element: <List />
       },
       {
         path: `${ROUTES.CHARACTERS}/:id`,
