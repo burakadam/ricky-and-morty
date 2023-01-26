@@ -13,4 +13,21 @@ const CardList = styled(ImageList)`
   }
 `;
 
-export { CardList };
+const PaginationContainer = styled('div')`
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 600px) {
+    li > div {
+      padding: 0 3px;
+      margin: 0;
+      min-width: 22px;
+    }
+    li > button {
+      min-width: 22px;
+      height: 22px;
+    }
+  }
+`;
+
+export { CardList, PaginationContainer };

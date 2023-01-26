@@ -1,5 +1,5 @@
 import { gql, useQuery } from '@apollo/client';
-import { Box, Pagination } from '@mui/material';
+import { Pagination } from '@mui/material';
 
 import { Card } from '@/components/Card';
 import { Error } from '@/components/Error';
@@ -47,9 +47,9 @@ const Main = () => {
           <Card key={item.id} character={item} />
         ))}
       </S.CardList>
-      <Box my={10} display="flex" justifyContent="center">
+      <S.PaginationContainer>
         <Pagination count={data?.characters?.info.pages} color="primary" page={page} onChange={handlePagination} />
-      </Box>
+      </S.PaginationContainer>
     </div>
   );
 };
