@@ -1,10 +1,12 @@
 import { gql, useQuery } from '@apollo/client';
-import { Box, ImageList, Pagination } from '@mui/material';
+import { Box, Pagination } from '@mui/material';
 
 import { Card } from '@/components/Card';
 import type { Character } from '@/gql/graphql';
 import { charactersAction, charactesSelectors } from '@/store/characters';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
+
+import * as S from './Main.styles';
 
 const GET_CHARACTERS = gql(/* GraphQL */ `
   query getCharacters($page: Int, $name: String, $status: String, $gender: String) {
@@ -38,11 +40,11 @@ const Main = () => {
 
   return (
     <div>
-      <ImageList cols={3} gap={8}>
+      <S.CardList cols={3} gap={8}>
         {data?.characters?.results.map((item: Character) => (
           <Card key={item.id} character={item} />
         ))}
-      </ImageList>
+      </S.CardList>
       <Box my={10} display="flex" justifyContent="center">
         <Pagination count={data?.characters?.info.pages} color="primary" page={page} onChange={handlePagination} />
       </Box>
