@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Character list card render component correctly 1`] = `
+<li
+  class="MuiImageListItem-root css-l086p4-MuiImageListItem-root"
+  style="height: auto; grid-column-end: span 1; grid-row-end: span 1;"
+>
+  <a
+    class="css-1lu6ooa"
+    href="/characters/13"
+  />
+  <img
+    alt="Alien Googah"
+    class="MuiImageListItem-img"
+    loading="lazy"
+    src="https://rickandmortyapi.com/api/character/avatar/13.jpeg"
+  />
+  <div
+    class="MuiImageListItemBar-root MuiImageListItemBar-positionBottom css-ztrqiq-MuiImageListItemBar-root"
+  >
+    <div
+      class="MuiImageListItemBar-titleWrap MuiImageListItemBar-titleWrapBottom css-1lizpae-MuiImageListItemBar-titleWrap"
+    >
+      <div
+        class="MuiImageListItemBar-title css-dasnyc-MuiImageListItemBar-title"
+      >
+        Alien Googah
+      </div>
+      <div
+        class="MuiImageListItemBar-subtitle css-hk6gwf-MuiImageListItemBar-subtitle"
+      >
+        <p>
+          unknown / unknown / type / Alien / 
+        </p>
+      </div>
+    </div>
+  </div>
+</li>
+`;

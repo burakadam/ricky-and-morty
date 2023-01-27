@@ -7,6 +7,8 @@ import * as S from './Card.styles';
 
 const Card = ({ character }: ICardItemProps) => {
   const { image, name, id, ...rest } = character;
+  // eslint-disable-next-line no-underscore-dangle
+  delete rest.__typename;
   const subtitle = Object.values(rest).join(' / ');
 
   return (
