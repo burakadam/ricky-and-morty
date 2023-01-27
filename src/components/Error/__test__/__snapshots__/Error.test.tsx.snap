@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`error text component render component correctly 1`] = `
+<div
+  class="css-1tq42kr"
+>
+  <p
+    class="MuiTypography-root MuiTypography-body1 css-1b0s3yy-MuiTypography-root"
+  >
+    Character not found!
+  </p>
+</div>
+`;
