@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Layout component render component correctly 1`] = `
+<div
+  class="css-14pq0uy"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1o5cd81-MuiPaper-root-MuiAppBar-root"
+  >
+    <a
+      href="/characters"
+    >
+      <img
+        alt="Rick and Morty silhoutte"
+        class="css-1j19rp1"
+        src="rick-and-morty-silhouette.jpg"
+      />
+    </a>
+    <img
+      alt="Rick and Morty show text logo"
+      class="css-tbbnae"
+      src="rick-and-morty-logo-text.png"
+    />
+  </header>
+  <div
+    class="css-r63hsx"
+  />
+  <footer
+    class="css-1n9380"
+  >
+    <a
+      href="/characters"
+    >
+      <img
+        class="css-blwqou"
+        src="rick-and-morty-green-hole.png"
+      />
+    </a>
+    <div
+      class="css-12voi5e"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-caption css-11idbvn-MuiTypography-root"
+      >
+        Created By:
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-caption css-2rpwgx-MuiTypography-root"
+      >
+        Dan Harmon - Justin Roiland
+      </span>
+    </div>
+  </footer>
+</div>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loading component render component correctly 1`] = `
+<div
+  class="css-smbw90"
+>
+  <img
+    alt="Rick and Morty silhoutte"
+    class="css-1cg9ond"
+    src="rick-and-morty-silhouette.jpg"
+  />
+  <p
+    class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+  >
+    LOADING
+  </p>
+</div>
+`;
