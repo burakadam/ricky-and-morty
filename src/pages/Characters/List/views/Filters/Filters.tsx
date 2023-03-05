@@ -17,8 +17,7 @@ const Filters = () => {
       name: '',
       species: '',
       status: '',
-      gender: '',
-      type: ''
+      gender: ''
     }
   );
 
@@ -42,9 +41,6 @@ const Filters = () => {
         </S.FilterRow>
         <S.FilterRow>
           <TextField name="species" label="Species" variant="outlined" onChange={handleInput} />
-        </S.FilterRow>
-        <S.FilterRow>
-          <TextField name="type" label="Type" variant="outlined" onChange={handleInput} />
         </S.FilterRow>
         <S.FilterRow>
           <span>Status</span>

@@ -8,7 +8,6 @@ const initialState: ICharactersState = {
   name: '',
   status: '',
   species: '',
-  type: '',
   gender: '',
   page: 1
 };
@@ -25,7 +24,6 @@ const charactersSlice = createSlice({
       state.species = action.payload.species;
       state.status = action.payload.status;
       state.gender = action.payload.gender;
-      state.type = action.payload.type;
     }
   }
 });

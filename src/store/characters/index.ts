@@ -2,7 +2,6 @@ export interface ICharactersState {
   name: string;
   status: string;
   species: string;
-  type: string;
   gender: string;
   page: number;
 }
